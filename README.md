@@ -15,5 +15,6 @@ Database Mysql
 ไฟล์ลิ้ง css และ script คือ server/setting.php
 ไฟล์ css หลัก และ js หลัก คือ assets/main/
 ไฟล์ logo  คือ assets/logo/logo.ico
+แตกไฟล์ plugin.zip ก่อน Framework อยู่ในโฟลเดอร์ plugin.zip
 
 หากสงสัยตรงไหนคิดค่อสอบถามได้ที่ เฟส รชตพล แจ่มใส
