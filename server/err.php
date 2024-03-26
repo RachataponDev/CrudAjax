@@ -49,8 +49,6 @@
 	}
 
 </style>
-
-<?php include("module/nav.php") ?>
 <div class="bg"></div>
 <div class="body">
 	<div class="left" data-aos="zoom-in">
@@ -61,8 +59,3 @@
 		<img data-aos="zoom-in-left" src="assets/img/err/bg-01.png" alt="">
 	</div>
 </div>
-<?php include("module/footer.php") ?>
-<script>
-AOS.init();
-</script>
-
