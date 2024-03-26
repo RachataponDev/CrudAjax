@@ -53,7 +53,6 @@
 <div class="body">
 	<div class="left" data-aos="zoom-in">
 		<p><?= $err?></p>
-		<span>ติดต่อฝ่ายบริการหากคิกว่าข้อมูลไม่ถูกต้อง <a href="help">ฝ่ายบริการ</a></span>
 	</div>
 	<div class="rigth">
 		<img data-aos="zoom-in-left" src="assets/img/err/bg-01.png" alt="">
