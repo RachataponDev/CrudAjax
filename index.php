@@ -12,9 +12,7 @@ try {
 </head>
 
 <body>
-
     <?php require_once "module/index/index.php";?>
-
     <?php require_once "server/script.php";?>
 </body>
 

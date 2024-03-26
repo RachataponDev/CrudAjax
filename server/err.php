@@ -1,5 +1,4 @@
 <?php require_once "setting.php" ?>
-
 <style>
 	.body {
 		display: flex;
@@ -49,6 +48,7 @@
 	}
 
 </style>
+
 <div class="bg"></div>
 <div class="body">
 	<div class="left" data-aos="zoom-in">
@@ -58,3 +58,4 @@
 		<img data-aos="zoom-in-left" src="assets/img/err/bg-01.png" alt="">
 	</div>
 </div>
+

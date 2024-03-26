@@ -18,14 +18,23 @@ try {
                     $avatar = $res["avatar"];
                     $sql = $db->prepare("DELETE FROM user WHERE ID = :id");
                     $sql->bindParam(":id", $id,PDO::PARAM_INT);
-                    if ($sql->execute()) {
                         if ($avatar !== "false") {
-                            unlink("../file/avatar/" . $avatar);
+                            if (unlink("../file/avatar/" . $avatar)) {
+                                $sql->execute();
+                                http_response_code(200);
+                                echo json_encode(array("status" => true, "message" => "success"));
+                                exit;
+                            }else {
+                                http_response_code(200);
+                                echo json_encode(array("status" => false, "message" => "Server Error!!"));
+                                exit;
+                            }
+                        }else {
+                            $sql->execute();
+                            http_response_code(200);
+                            echo json_encode(array("status" => true, "message" => "success"));
+                            exit;
                         }
-                        http_response_code(200);
-                        echo json_encode(array("status" => true, "message" => "success"));
-                        exit;
-                    }
                 } else {
                     http_response_code(200);
                     echo json_encode(array("status" => false, "message" => "Server Error!!"));

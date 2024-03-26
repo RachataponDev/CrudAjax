@@ -31,8 +31,8 @@ try {
             $sql->bindParam(':avatar', $filenamemain,PDO::PARAM_STR);
             $sql->bindParam(':date', $date,PDO::PARAM_STR);
             $sql->bindParam(':time', $time,PDO::PARAM_STR);
-            if ($sql->execute()) {
-                move_uploaded_file($file["tmp_name"],"../file/avatar/".$filenamemain);
+            if (move_uploaded_file($file["tmp_name"],"../file/avatar/".$filenamemain)) {
+                $sql->execute();
                 http_response_code(200);
                 echo json_encode(array("status" => true, "message" => "success"));
                 exit;
